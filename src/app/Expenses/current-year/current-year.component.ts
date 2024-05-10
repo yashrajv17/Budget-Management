@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MyServiceService } from 'src/app/Services/my-service.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-current-year',
@@ -23,7 +24,7 @@ export class CurrentYearComponent implements OnInit {
     }
     else {
        this.router.navigate(['/login']);
-       alert('You are not Logged In !!')
+       Swal.fire('You are not Logged In !!');
     }
 
 

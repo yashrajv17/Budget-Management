@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MyServiceService } from 'src/app/Services/my-service.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-current-month',
@@ -14,7 +15,7 @@ export class CurrentMonthComponent implements OnInit {
   constructor(private myService: MyServiceService, private router: Router) { }
 
   ngOnInit() {
-
+``
     if(this.myService.isUserLoggedIn()) {
       // Your function
       this.currentMonthNumber = (new Date()).getMonth() + 1;
@@ -23,7 +24,7 @@ export class CurrentMonthComponent implements OnInit {
     }
     else {
        this.router.navigate(['/login']);
-       alert('You are not Logged In !!')
+       Swal.fire('You are not Logged In !!');
     }
     
   }

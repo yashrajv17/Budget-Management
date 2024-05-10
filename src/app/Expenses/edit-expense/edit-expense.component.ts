@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { MyServiceService } from 'src/app/Services/my-service.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-edit-expense',
@@ -27,7 +28,7 @@ export class EditExpenseComponent {
     }
     else {
        this.router.navigate(['/login']);
-       alert('You are not Logged In !!')
+       Swal.fire('You are not Logged In !!');
     }
     
   }

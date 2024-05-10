@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { MyServiceService } from 'src/app/Services/my-service.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-delete-expense',
@@ -19,11 +20,10 @@ export class DeleteExpenseComponent {
   ngOnInit() {
     if(this.expenseService.isUserLoggedIn()) {
       // Your function
-  
     }
     else {
        this.router.navigate(['/login']);
-       alert('You are not Logged In !!')
+       Swal.fire('You are not Logged In !!');
     }
   }
 
@@ -31,18 +31,18 @@ export class DeleteExpenseComponent {
     this.expenseService.deleteExpense(this.expenseObj.id).subscribe(
       (resultData: any) => {
         if(resultData == "Expense successfully deleted"){
-          // alert("Successfully Deleted");
+          alert("Successfully Deleted");
         }
         else{
-          alert("Delete successful");
+          Swal.fire('Delete Successfully !!');
         }
       },
       (error) => {
         console.error('API Error:', error);
         if (error.status === 401) {
-          alert("Unauthorized: Please check your token");
+          Swal.fire("Unauthorized: Please check your token");
         } else {
-          alert("API Error");
+          Swal.fire('API Error !');
         }
       }
     );

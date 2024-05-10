@@ -31,7 +31,7 @@ export class HomepageComponent implements OnInit {
     }
     else {
        this.router.navigate(['/login']);
-       alert('You are not Logged In !!')
+       Swal.fire('You are not Logged In !!');
     }
   }
 
