@@ -1,0 +1,69 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Signup Form</title>
+</head>
+<body>
+ 
+         
+    <div class="card">
+        <h2>Register</h2>
+ 
+           
+        <div class="login_register">
+            <a routerLink="/login" class="login">Login</a>
+            <a routerLink="/register" class="register">Register</a>
+        </div>
+ 
+           
+        <form class="form">
+            <div>
+                <input type="text" name="fullName" placeholder="Username" class="email" [(ngModel)]="registers.fullName" required #fullName="ngModel">
+                <div *ngIf="fullName.invalid && (fullName.dirty || fullName.touched)" class="alert">
+                        <div *ngIf="fullName.errors?.['required']"></div>
+                        Username is required.
+                    </div>
+                </div>
+            
+            <div>
+                <input type="email" name="email" placeholder="Email Address" class="email" [(ngModel)]="registers.email" required #email="ngModel">
+                <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert">
+                    <div *ngIf="email.errors?.['required']">
+                        Email is required.
+                    </div>
+                    <div *ngIf="email.errors?.['email']">
+                        Invalid email address.
+                    </div>
+                </div>
+            </div>
+            <div>
+                <input type="password" name="password" placeholder="Password" class="pass" [(ngModel)]="registers.password" required #password="ngModel">
+                <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert">
+                    <div *ngIf="password.errors?.['required']">
+                        Password is required.
+                    </div>
+                </div>
+            </div>
+            <div>
+                <input type="password" name="confirmpassword" placeholder="Confirm Password" class="confirm_pass" [(ngModel)]="registers.confirmpassword" required #confirmpassword="ngModel">
+                <div *ngIf="confirmpassword.invalid && (confirmpassword.dirty || confirmpassword.touched)" class="alert">
+                    <div *ngIf="confirmpassword.errors?.['required']">
+                        Confirm Password is required.
+                    </div>
+                    <div *ngIf="confirmpassword.errors?.['confirmPassword']">
+                        Passwords do not match.
+                    </div>
+                </div>
+            </div>
+        </form>
+            <button type="submit" class="login_btn" (click)="register()">Register</button>
+            <div class="footer_card">
+               
+                <a href="/login">Already a member? Login now</a>
+                </div>
+    </div>
+       
+</body>
+</html>

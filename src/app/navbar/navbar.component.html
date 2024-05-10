@@ -1,0 +1,16 @@
+<div class="topnav">
+    <!-- Navigation links -->
+    <div id="myLinks">
+        <a href="/home" class="logo-link">
+            <img src="https://fastbudget.app/images/app_icon_256.png" alt="Budget Management Logo">
+        </a>
+    <a href="" routerLink="/homepage" [class.active-link]="isActive('/homepage')">Add Expense</a>
+    <a href="" routerLink="/view-expense" [class.active-link]="isActive('/view-expense')">View Expense</a>
+    <a href="" routerLink="/edit-expense"  [class.active-link]="isActive('/edit-expense')">Update Expense</a>
+    <a href="" routerLink="/delete-expense"  [class.active-link]="isActive('/delete-expense')">Delete Expense</a>
+    <a href="" routerLink="/today-expenses"  [class.active-link]="isActive('/today-expenses')" (click)="swalfuntoday()">Today's Expense</a>
+    <a href="" routerLink="/current-month" [class.active-link]="isActive('/current-month')" (click)="swalfunmonth()">Month Expense</a>
+    <a href="" routerLink="/current-year" [class.active-link]="isActive('/current-year')" (click)="swalfunyear()">Year Expense</a>
+    <a href="" routerLink="/login" (click)="swalfunlogout()">Log Out</a>
+    </div>
+</div>

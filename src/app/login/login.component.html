@@ -1,0 +1,40 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" >
+    <title>Login Form</title>
+</head>
+<body>
+    <div class="card">
+        <h2>Login Form</h2>
+ 
+        <div class="login_register">
+            <a routerLink="/login" class="login">Login</a>
+            <a routerLink="/register" class="register">Register</a>
+            
+        </div>
+ 
+        <form [formGroup]="loginForm" class="form">
+            <input type="text" formControlName="email" placeholder="Email Address" class="email" required>
+            <div *ngIf="formControls['email'].invalid && (formControls['email'].dirty || formControls['email'].touched)">
+              <div *ngIf="formControls['email'].errors?.['required']">Email is required.</div>
+              <div *ngIf="formControls['email'].errors?.['email']">Invalid email format.</div>
+            </div>
+            <input type="password" formControlName="password" placeholder="Password" class="pass" required>
+            <div *ngIf="formControls['password'].invalid && (formControls['password'].dirty || formControls['password'].touched)">
+              <div *ngIf="formControls['password'].errors?.['required']">Password is required.</div>
+              <div *ngIf="formControls['password'].errors?.['minlength']">Password must be at least 6 characters long.</div>
+            </div>
+          </form>
+          <button type="button" (click)="login()" class="login_btn">Login</button>
+          
+        <div class="footer_card">
+        <p>Not a member?</p>
+        <a href="/register">Sign up now</a>
+        </div>
+    </div>
+       
+</body>
+</html>

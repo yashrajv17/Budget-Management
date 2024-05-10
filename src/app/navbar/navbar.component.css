@@ -1,0 +1,44 @@
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a.active-link {
+    text-decoration: underline;
+}
+
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    
+  }
+
+  .active-link {
+    background-color: #ffcc00; /* Change the background color to your desired highlight color */
+    color: #000; /* Change the text color to improve readability */
+  }
+  
+  .logo-link {
+    display: flex; 
+    align-items: center; 
+    cursor: none;
+   
+  }
+      .logo-link img {
+          height: 22px;  
+          pointer-events: none;
+      }
+      .logo-link img:hover {
+        pointer-events: none !important;
+        /* Add any other properties you want to disable during hover */
+      }

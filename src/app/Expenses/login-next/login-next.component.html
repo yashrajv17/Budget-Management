@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expense Tracker</title>
+
+<style>
+  body, html {
+      margin: 0px;
+      padding: 0px;  }
+</style>
+</head>
+<body class="login-page">
+
+    <div class="topnav">
+        <a href="/home" class="logo-link">
+            <img src="https://fastbudget.app/images/app_icon_256.png" alt="Budget Management Logo">
+        </a>
+    
+        <div id="myLinks">
+            <a routerLink="/login" class="swal-alert" (click)="onaddExpense()">Add Expense</a>
+            <a routerLink="/login" class="swal-alert" (click)="oneditExpense()">Edit Expense</a>
+            <a routerLink="/login" class="swal-alert" (click)="ondeleteExpense()">Delete Expense</a>
+
+            <a href="/login" class="login-right">Login</a>
+            <a href="/register" class="register-right">Register</a>
+        </div>
+    </div>
+    
+<section class="cabin"> 
+    <ul class='local'>
+        
+        <img src="https://fastbudget.app/images/app_icon_256.png" alt="Budget Management Logo" class="logo">
+   
+        <h1 class="about-heading">Expense Manager
+        </h1>
+        <h4 class="about-text">Manage your personal finances and easily track your money, expenses and budget</h4>
+        <img src="https://www.lpcentre.com/new_storage/images/posts//75_1703703587.jpg" alt="Budget Management">
+    </ul>
+</section>
+
+<div class="page_section">
+    <div>
+      <div>
+        <h2>Easy import</h2>
+        <span>Coming from another app? Easily Manage Expense at a glance</span>
+      </div>
+    </div>
+    
+    <div>
+      <h2>Budget Web</h2>
+      <span>Take advantage of a larger screen to better analyze your financial movements</span>
+    </div>
+   
+    <div>
+      <h2>Contact us</h2>
+      <span>If you have any questions, contact our customer support by email at support.web@budgetmgmt.com</span>
+    </div>
+  </div>
+
+  <section class="content">
+    <h1 class="about-heading">ABOUT US</h1>
+    <p class="about-text">We are a Non-Funded Firm, offering free access to our Expense Management tools. A project created using Angular Framework which is absolutely a piece of art. Keep using our services, and soon we shall Generate Revenue using Ads.</p>
+</section>
+
+
+<section class="footer">
+    &copy; 2024 Budget Management. All rights reserved.
+    <br>
+   <a href="" class="footer-color">Terms of Service </a> | <a href="" class="footer-color">
+    Privacy Policy</a> | <a href="" class="footer-color">Manage cookies</a> 
+</section>
+
+</body>
+</html>

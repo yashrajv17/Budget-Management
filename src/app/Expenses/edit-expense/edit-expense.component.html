@@ -1,0 +1,44 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+    </style>
+
+  <body>
+    <app-navbar></app-navbar>
+      <nav class="navbar">
+        <h1 style="text-align: center;">UPDATE EXPENSE</h1>
+      </nav>
+      
+      <section class="Expensetable">
+        <table>
+            <tr>
+                <!--Fill code for name-->
+                <td><label for="id">Id</label></td>
+                <td><input type="text" id="id" [(ngModel)]="expenseObj.id" ></td>
+              </tr>
+              <tr>
+                <!--Fill code for Departure City-->
+                <td><label for="category">Category</label></td>
+                <td><input type="text" id="category" name="category"  [(ngModel)]="expenseObj.category" ></td>
+              </tr>
+              <tr>
+                <!--Fill code for Destination City-->
+                <td><label for="description">Description</label></td>
+                <td><input type="text" id="description" name="description" [(ngModel)]="expenseObj.description" ></td>
+              </tr>
+              <tr>
+                <!--Fill code for Destination City-->
+                <td><label for="date">Date</label></td>
+                <td><input type="date" id="date" name="date" [(ngModel)]="expenseObj.date" ></td>
+              </tr>
+            <tr>
+              <!--Fill code for Number of Tickets-->
+              <td><label for="amount">Price</label></td>
+              <td><input type="number" id="amount" name="amount"  [(ngModel)]="expenseObj.amount"  ></td>
+            </tr>
+        </table>
+ 
+        <div id="button">
+            <button (click)="updateExpense()" class="btn btn-secondary">Update Expense</button>
+        </div>
+    </section>
+  </body>
